@@ -105,16 +105,6 @@ class helper_plugin_semantic extends DokuWiki_Plugin
     }
 
     /**
-     * Get the URL of the first image in page
-     *
-     * @return string
-     */
-    public function getFirstImageURL()
-    {
-        return ($this->getFirstImage() ? ml($this->getFirstImage(), '', true, '&amp;', true) : null);
-    }
-
-    /**
      * Get page description
      *
      * @return string
@@ -392,7 +382,7 @@ class helper_plugin_semantic extends DokuWiki_Plugin
             $locale .= '_' . strtoupper($locale);
         }
 
-        $images = this->getImageData();
+        $images = $this->getImageData();
 
         $open_graph = array(
 
